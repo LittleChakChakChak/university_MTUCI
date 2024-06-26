@@ -1,0 +1,63 @@
+body {
+    background-image: url("/img/bak.jpg");
+    margin: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+main #main-content {
+    margin-left: 12%;
+    margin-right: 12%;
+    background-color: #ABABAB;
+}
+
+#section {
+    border-bottom: 1px solid black;
+    height: 350px;
+}
+
+#section img {
+    width: 50%;
+    height: 350px;
+    float: left;
+}
+
+#section p {
+    height: auto;
+}
+
+#main-content #section:nth-child(3) img {
+    width: 50%;
+    height: 350px;
+    float: right;
+}
+
+#main-content #section:nth-child(3) p {
+    height: auto;
+}
+
+#time {
+    margin: auto;
+}
+
+#time::before {
+    content: "✗ ";
+    color: aquamarine;
+    padding-left: 3%;
+}
+
+#time::after {
+    content: " минут;";
+}
+
+#h::before {
+    content: "<<";
+}
+
+#h::after {
+    content: ">>";
+}

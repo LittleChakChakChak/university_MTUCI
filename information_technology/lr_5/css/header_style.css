@@ -1,0 +1,45 @@
+.header {
+  background-color: #0088A6;
+  padding-left: 7%;
+  padding-right: 7%;
+  display: flex;
+  align-items: center;
+}
+
+#logo_name {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#logo img {
+  width: 35%;
+  height: 35%;
+}
+
+#logo_name #name h3 {
+  color: white;
+}
+
+#menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5%;
+}
+
+nav li {
+  list-style-type: none;  
+  padding: 10px;
+  border: 2px solid #ffffff;
+}
+
+li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+}
+
+li a:hover {
+  opacity:0.2;
+}

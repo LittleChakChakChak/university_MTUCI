@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(175, 238, 238);
+    margin: auto;
+}
+
+main {
+    font-family: "Lo";
+}
+
+main h1 {
+    text-align: center;
+}
+
+main p {
+    margin-left: 25%;
+    text-align: right;
+}
+
+main #button {
+    text-align: center;
+}
+
+main #main-content {
+    padding-left: 12%;
+    padding-right: 12%;
+    border: 1px solid black;
+}
+
+#table_class {
+    margin: auto;
+}
+
+#table_class td {
+    text-align: center;
+}

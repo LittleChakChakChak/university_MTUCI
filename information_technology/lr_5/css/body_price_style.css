@@ -1,0 +1,70 @@
+body {
+    background-image: url("../img/bak.jpg") no-repeat;
+    margin: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+main p {
+    text-align: center;
+    margin-top: 0;
+}
+
+main #container {
+    margin-left: 12%;
+    margin-right: 12%;
+    background-color: #ABABAB;
+}
+
+#h::before {
+    content: "<<";
+}
+
+#h::after {
+    content: ">>";
+}
+
+/* ------------------------------ */
+
+main #container #grid-container-1{
+    display: grid;
+    /*grid-template-columns: 1fr 40px 25%;*/
+    grid-template-columns: 20% repeat(2, 1fr);
+}
+
+main #container #grid-container-1 div{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* ------------------------------ */
+
+main #container #grid-container-2{
+    display: grid;
+    grid-template-columns: 35px 1fr 35%;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+main #container #grid-container-2 div{
+    border: 1px solid red;
+    padding: 10px;
+}
+
+/* ------------------------------ */
+
+main #container #grid-container-3{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 50px 20px;
+}
+
+main #container #grid-container-3 div{
+    border: 1px solid green;
+    padding: 10px;
+}
+
+/* ------------------------------ */

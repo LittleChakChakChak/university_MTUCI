@@ -1,0 +1,108 @@
+body {
+    background-image: url("../img/bak.jpg") no-repeat;
+    margin: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+main #flex-container {
+    display: flex;
+    margin-left: 12%;
+    margin-right: 12%;
+    background-color: #ABABAB;
+    flex-direction: column;
+}
+
+#h::before {
+    content: "<<";
+}
+
+#h::after {
+    content: ">>";
+}
+
+main #flex-item {
+    display: flex;
+    align-content: stretch;
+    box-shadow: 10px 10px 10px blue;
+}
+
+main #flex-item #list {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: 1%;
+}
+
+main #flex-item #list #item::before {
+    content: "✗";
+    color: aquamarine;
+    padding-left: 3%;
+}
+
+main #flex-item #list #item {
+    padding: 0;
+    margin: 0;
+}
+
+main #flex-item img {
+    height: 350px;
+    margin: 5px;
+    flex-basis: auto;
+}
+
+#flex-item p {
+    margin-right: auto;
+    margin-left: 1%;
+}
+
+button {
+    height: 50px;
+    width: 250px;
+    margin: 5%;
+    border-radius: 10px;
+    border: 2px solid blue;
+    background-image: url("../img/button.jpeg");
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}   
+
+button:hover {
+    opacity: 0.8;
+}
+  
+button:active {
+    transform: scale(0.95);
+}
+
+/* ---- */
+
+#flex-container-empty {
+    border: 3px solid green;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#flex-item-empty {
+    height: 200px;
+    width: 200px;
+    border: 3px solid red;
+    justify-content: center;
+}
+
+#flex-container-empty #flex-item-empty:nth-child(1) {
+    align-items: flex-start;
+}
+
+#flex-container-empty #flex-item-empty:nth-child(2) {
+    margin-left: 40.75%;
+}
+
+#flex-container-empty #flex-item-empty:nth-child(3) {
+    margin-left: 81.5%;
+}

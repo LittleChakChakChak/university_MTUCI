@@ -1,0 +1,52 @@
+.header {
+  background-color: #0088A6;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+#logo img {
+  float: left;
+  margin: auto;
+  width: 35%;
+  height: 35%;
+  padding-left: 1%;
+}
+
+#logo_name {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding-right: -35%;
+}
+
+#logo_name #name h3 {
+  margin: auto;
+  padding: auto;
+  float: left; 
+  color: white;
+  padding-top: 5%;
+}
+
+#menu {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 17%;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+li a {
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  margin-left: 5px;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 30px;
+}
+
+li a:hover {
+  opacity:0.2;
+}

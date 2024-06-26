@@ -1,0 +1,28 @@
+.header {
+  background-color: rgb(70, 130, 180);
+  border-bottom: 2px solid #ffffff;
+  white-space: nowrap
+}
+
+#logo_name {
+  border: 2px solid #ffffff;
+  display: inline-block;
+  margin: 1%;
+}
+
+#menu{
+  border: 2px solid #ffffff;
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+li a {
+  text-decoration: none;
+}
+

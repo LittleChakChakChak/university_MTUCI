@@ -1,0 +1,35 @@
+footer {
+    background-color: #0088A6;
+    padding: auto;
+    margin: auto;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+#map_site {
+    width: 350px;
+    height: 350px;
+    border: 1px solid black;
+    text-align: center;
+    display: inline-block;
+    margin-left: 12%;
+}
+
+#map_site p {
+    margin-top: 2%;
+}
+
+#contact {
+    float: right;
+    display: inline-block;
+}
+
+#contact p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#city {
+    display: inline-block; 
+    float: left;
+}
