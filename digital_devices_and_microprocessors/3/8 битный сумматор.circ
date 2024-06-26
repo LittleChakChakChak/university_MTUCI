@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+  This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+
+  <lib desc="#Wiring" name="0"/>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="Полусуматор"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="Полусуматор">
+    <a name="circuit" val="Полусуматор"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <rect fill="none" height="49" stroke="#000000" stroke-width="2" width="81" x="40" y="30"/>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="48" y="42">А</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="47" y="72">В</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="103" y="42">Сумма</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="100" y="72">Перевод</text>
+      <circ-port height="8" pin="80,140" width="8" x="36" y="36"/>
+      <circ-port height="8" pin="80,180" width="8" x="36" y="66"/>
+      <circ-port height="10" pin="290,160" width="10" x="115" y="35"/>
+      <circ-port height="10" pin="290,250" width="10" x="115" y="65"/>
+      <circ-anchor facing="east" height="6" width="6" x="117" y="37"/>
+    </appear>
+    <wire from="(170,180)" to="(170,230)"/>
+    <wire from="(120,140)" to="(120,270)"/>
+    <wire from="(260,250)" to="(290,250)"/>
+    <wire from="(80,180)" to="(170,180)"/>
+    <wire from="(120,270)" to="(210,270)"/>
+    <wire from="(120,140)" to="(210,140)"/>
+    <wire from="(270,160)" to="(290,160)"/>
+    <wire from="(80,140)" to="(120,140)"/>
+    <wire from="(170,230)" to="(210,230)"/>
+    <wire from="(170,180)" to="(210,180)"/>
+    <comp lib="1" loc="(270,160)" name="XOR Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(260,250)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(290,250)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Перевод"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(80,180)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="0" loc="(80,140)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="0" loc="(290,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Сумма"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  <circuit name="1 битный сумматор">
+    <a name="circuit" val="1 битный сумматор"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <rect fill="none" height="77" stroke="#000000" stroke-width="2" width="130" x="50" y="52"/>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="58" y="92">А</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="57" y="122">В</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="76" y="62">Ввод Перевод</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="163" y="72">Сумма</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="160" y="111">Перевод</text>
+      <circ-port height="8" pin="130,130" width="8" x="46" y="86"/>
+      <circ-port height="8" pin="130,160" width="8" x="46" y="116"/>
+      <circ-port height="8" pin="130,90" width="8" x="46" y="56"/>
+      <circ-port height="10" pin="520,90" width="10" x="175" y="65"/>
+      <circ-port height="10" pin="520,140" width="10" x="175" y="105"/>
+      <circ-anchor facing="east" height="6" width="6" x="177" y="67"/>
+    </appear>
+    <wire from="(230,130)" to="(260,130)"/>
+    <wire from="(510,140)" to="(520,140)"/>
+    <wire from="(130,90)" to="(290,90)"/>
+    <wire from="(370,120)" to="(460,120)"/>
+    <wire from="(260,120)" to="(290,120)"/>
+    <wire from="(260,120)" to="(260,130)"/>
+    <wire from="(230,160)" to="(460,160)"/>
+    <wire from="(130,130)" to="(150,130)"/>
+    <wire from="(130,160)" to="(150,160)"/>
+    <wire from="(370,90)" to="(520,90)"/>
+    <comp lib="0" loc="(130,130)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="А"/>
+    </comp>
+    <comp lib="0" loc="(130,160)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="В"/>
+    </comp>
+    <comp lib="0" loc="(520,90)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Сумма"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(510,140)" name="OR Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(130,90)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Ввод из перевода"/>
+    </comp>
+    <comp loc="(370,90)" name="Полусуматор"/>
+    <comp loc="(230,130)" name="Полусуматор"/>
+    <comp lib="0" loc="(520,140)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Перевод"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  <circuit name="8 битный сумматор">
+    <a name="circuit" val="8 битный сумматор"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(740,400)" to="(860,400)"/>
+    <wire from="(880,360)" to="(930,360)"/>
+    <wire from="(800,390)" to="(860,390)"/>
+    <wire from="(220,180)" to="(220,190)"/>
+    <wire from="(290,130)" to="(290,400)"/>
+    <wire from="(200,400)" to="(200,670)"/>
+    <wire from="(340,20)" to="(340,40)"/>
+    <wire from="(510,190)" to="(510,220)"/>
+    <wire from="(230,380)" to="(230,470)"/>
+    <wire from="(320,110)" to="(320,200)"/>
+    <wire from="(110,390)" to="(110,420)"/>
+    <wire from="(230,270)" to="(380,270)"/>
+    <wire from="(230,470)" to="(380,470)"/>
+    <wire from="(180,410)" to="(180,770)"/>
+    <wire from="(820,150)" to="(820,380)"/>
+    <wire from="(770,420)" to="(860,420)"/>
+    <wire from="(830,450)" to="(860,450)"/>
+    <wire from="(300,120)" to="(300,300)"/>
+    <wire from="(370,220)" to="(510,220)"/>
+    <wire from="(510,390)" to="(520,390)"/>
+    <wire from="(510,190)" to="(520,190)"/>
+    <wire from="(210,390)" to="(210,570)"/>
+    <wire from="(100,420)" to="(110,420)"/>
+    <wire from="(210,230)" to="(340,230)"/>
+    <wire from="(510,590)" to="(520,590)"/>
+    <wire from="(320,200)" to="(380,200)"/>
+    <wire from="(240,120)" to="(300,120)"/>
+    <wire from="(240,130)" to="(290,130)"/>
+    <wire from="(370,220)" to="(370,240)"/>
+    <wire from="(370,420)" to="(370,440)"/>
+    <wire from="(370,620)" to="(370,640)"/>
+    <wire from="(110,190)" to="(220,190)"/>
+    <wire from="(520,290)" to="(520,320)"/>
+    <wire from="(520,490)" to="(520,520)"/>
+    <wire from="(520,690)" to="(520,720)"/>
+    <wire from="(520,90)" to="(520,120)"/>
+    <wire from="(230,270)" to="(230,360)"/>
+    <wire from="(930,340)" to="(930,360)"/>
+    <wire from="(240,140)" to="(280,140)"/>
+    <wire from="(510,750)" to="(810,750)"/>
+    <wire from="(340,40)" to="(380,40)"/>
+    <wire from="(510,650)" to="(790,650)"/>
+    <wire from="(240,150)" to="(270,150)"/>
+    <wire from="(110,420)" to="(140,420)"/>
+    <wire from="(160,70)" to="(380,70)"/>
+    <wire from="(930,360)" to="(960,360)"/>
+    <wire from="(240,160)" to="(260,160)"/>
+    <wire from="(370,420)" to="(520,420)"/>
+    <wire from="(370,620)" to="(520,620)"/>
+    <wire from="(510,50)" to="(840,50)"/>
+    <wire from="(370,140)" to="(380,140)"/>
+    <wire from="(370,340)" to="(380,340)"/>
+    <wire from="(370,540)" to="(380,540)"/>
+    <wire from="(370,740)" to="(380,740)"/>
+    <wire from="(240,110)" to="(320,110)"/>
+    <wire from="(510,550)" to="(770,550)"/>
+    <wire from="(250,170)" to="(250,800)"/>
+    <wire from="(240,170)" to="(250,170)"/>
+    <wire from="(790,430)" to="(860,430)"/>
+    <wire from="(240,100)" to="(380,100)"/>
+    <wire from="(160,360)" to="(230,360)"/>
+    <wire from="(740,350)" to="(740,400)"/>
+    <wire from="(250,800)" to="(380,800)"/>
+    <wire from="(260,700)" to="(380,700)"/>
+    <wire from="(840,50)" to="(840,370)"/>
+    <wire from="(510,150)" to="(820,150)"/>
+    <wire from="(200,670)" to="(380,670)"/>
+    <wire from="(210,570)" to="(380,570)"/>
+    <wire from="(110,170)" to="(110,190)"/>
+    <wire from="(270,600)" to="(380,600)"/>
+    <wire from="(280,500)" to="(380,500)"/>
+    <wire from="(260,160)" to="(260,700)"/>
+    <wire from="(510,450)" to="(750,450)"/>
+    <wire from="(510,250)" to="(800,250)"/>
+    <wire from="(340,170)" to="(380,170)"/>
+    <wire from="(240,20)" to="(340,20)"/>
+    <wire from="(840,370)" to="(860,370)"/>
+    <wire from="(290,400)" to="(380,400)"/>
+    <wire from="(750,410)" to="(750,450)"/>
+    <wire from="(160,410)" to="(180,410)"/>
+    <wire from="(510,90)" to="(520,90)"/>
+    <wire from="(510,290)" to="(520,290)"/>
+    <wire from="(510,490)" to="(520,490)"/>
+    <wire from="(300,300)" to="(380,300)"/>
+    <wire from="(510,690)" to="(520,690)"/>
+    <wire from="(800,250)" to="(800,390)"/>
+    <wire from="(810,440)" to="(860,440)"/>
+    <wire from="(270,150)" to="(270,600)"/>
+    <wire from="(510,790)" to="(830,790)"/>
+    <wire from="(770,420)" to="(770,550)"/>
+    <wire from="(160,70)" to="(160,340)"/>
+    <wire from="(160,350)" to="(210,350)"/>
+    <wire from="(160,390)" to="(210,390)"/>
+    <wire from="(380,90)" to="(380,100)"/>
+    <wire from="(790,430)" to="(790,650)"/>
+    <wire from="(370,320)" to="(370,340)"/>
+    <wire from="(370,520)" to="(370,540)"/>
+    <wire from="(370,720)" to="(370,740)"/>
+    <wire from="(370,120)" to="(370,140)"/>
+    <wire from="(820,380)" to="(860,380)"/>
+    <wire from="(520,390)" to="(520,420)"/>
+    <wire from="(520,590)" to="(520,620)"/>
+    <wire from="(830,450)" to="(830,790)"/>
+    <wire from="(520,190)" to="(520,220)"/>
+    <wire from="(750,410)" to="(860,410)"/>
+    <wire from="(160,400)" to="(200,400)"/>
+    <wire from="(510,350)" to="(740,350)"/>
+    <wire from="(160,370)" to="(380,370)"/>
+    <wire from="(280,140)" to="(280,500)"/>
+    <wire from="(370,720)" to="(520,720)"/>
+    <wire from="(90,190)" to="(110,190)"/>
+    <wire from="(370,320)" to="(520,320)"/>
+    <wire from="(370,120)" to="(520,120)"/>
+    <wire from="(370,520)" to="(520,520)"/>
+    <wire from="(510,220)" to="(520,220)"/>
+    <wire from="(370,240)" to="(380,240)"/>
+    <wire from="(370,440)" to="(380,440)"/>
+    <wire from="(370,640)" to="(380,640)"/>
+    <wire from="(160,380)" to="(230,380)"/>
+    <wire from="(340,170)" to="(340,230)"/>
+    <wire from="(810,440)" to="(810,750)"/>
+    <wire from="(210,230)" to="(210,350)"/>
+    <wire from="(180,770)" to="(380,770)"/>
+    <comp loc="(510,150)" name="1 битный сумматор"/>
+    <comp lib="0" loc="(110,170)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp loc="(510,650)" name="1 битный сумматор"/>
+    <comp lib="0" loc="(880,360)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="9"/>
+      <a name="incoming" val="9"/>
+    </comp>
+    <comp lib="0" loc="(110,390)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(240,20)" name="Ground">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp loc="(510,550)" name="1 битный сумматор"/>
+    <comp loc="(510,250)" name="1 битный сумматор"/>
+    <comp lib="0" loc="(100,420)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="А"/>
+    </comp>
+    <comp lib="0" loc="(960,360)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="9"/>
+      <a name="tristate" val="false"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(220,180)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(140,420)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp loc="(510,750)" name="1 битный сумматор"/>
+    <comp loc="(510,350)" name="1 битный сумматор"/>
+    <comp loc="(510,450)" name="1 битный сумматор"/>
+    <comp lib="0" loc="(930,340)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(90,190)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="В"/>
+    </comp>
+    <comp loc="(510,50)" name="1 битный сумматор"/>
+  </circuit>
+</project>
