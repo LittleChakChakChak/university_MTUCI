@@ -4,6 +4,8 @@ import joblib
 from io import BytesIO
 import os
 
+!pip install python-multipart
+
 app = FastAPI()
 
 # Укажите путь к модели (обязательно сохраните её туда заранее)
